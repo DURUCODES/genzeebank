@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+body{
+  
+}
+.container{
+    width: 375px;
+    margin: auto;
+    height: 100vh;
+    background-color: rgb(14, 13, 13);
+}
+h3{
+  color: white;
+  font-family: sans-serif;
+  
+ }
+ /*LOADER STARTS HERE */
+ .cube-loader {
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    top: 35%;
+    left: 45%;
+  /* u can choose any size */
+    width: 75px;
+    height: 75px;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg);
+    animation: animate 4s linear infinite;
+   
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotateX(-30deg) rotateY(0);
+    }
+  
+    100% {
+      transform: rotateX(-30deg) rotateY(360deg);
+    }
+  }
+  
+  .cube-loader .cube-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* top: 0;
+    left: 0; */
+    transform-style: preserve-3d;
+  }
+  
+  .cube-loader .cube-wrapper .cube-span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* top: 0;
+    left: 0; */
+                                       /* width 75px / 2 = 37.5px */
+    transform: rotateY(calc(90deg * var(--i))) translateZ(37.5px);
+    background: linear-gradient(
+      to bottom,
+      hsl(330, 3.13%, 25.1%) 0%,
+      hsl(177.27, 21.71%, 32.06%) 5.5%,
+      hsl(176.67, 34.1%, 36.88%) 12.1%,
+      hsl(176.61, 42.28%, 40.7%) 19.6%,
+      hsl(176.63, 48.32%, 43.88%) 27.9%,
+      hsl(176.66, 53.07%, 46.58%) 36.6%,
+      hsl(176.7, 56.94%, 48.91%) 45.6%,
+      hsl(176.74, 62.39%, 50.91%) 54.6%,
+      hsl(176.77, 69.86%, 52.62%) 63.4%,
+      hsl(176.8, 76.78%, 54.08%) 71.7%,
+      hsl(176.83, 83.02%, 55.29%) 79.4%,
+      hsl(176.85, 88.44%, 56.28%) 86.2%,
+      hsl(176.86, 92.9%, 57.04%) 91.9%,
+      hsl(176.88, 96.24%, 57.59%) 96.3%,
+      hsl(176.88, 98.34%, 57.93%) 99%,
+      hsl(176.89, 99.07%, 58.04%) 100%
+    );
+  }
+  
+  .cube-top {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: hsl(330, 3.13%, 25.1%) 0%;
+                        /* width 75px / 2 = 37.5px */
+    transform: rotateX(90deg) translateZ(37.5px);
+    transform-style: preserve-3d;
+  }
+  
+  .cube-top::before {
+    content: '';
+    position: absolute;
+  /* u can choose any size */
+    width: 75px;
+    height: 75px;
+    background: hsl(176.61, 42.28%, 40.7%) 19.6%;
+    transform: translateZ(-90px);
+    filter: blur(10px);
+    box-shadow: 0 0 10px #323232,
+                0 0 20px hsl(176.61, 42.28%, 40.7%) 19.6%,
+                0 0 30px #323232,
+                0 0 40px hsl(176.61, 42.28%, 40.7%) 19.6%;
+  }
+  
+  
+  /*///////////////////*/
+
+
+.intro-img{
+    width: 300px;
+}
+.main{
+ display: flex;
+  flex-direction: column;
+ 
+}
+.welcome-page{
+  padding: 50px;
+  display: none;
+  flex-direction: column;
+ 
+}
+.welcome-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-wrapper h1{
+    color: white;
+    margin-right: 25px;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.bankname {
+    display: inline-block; /* Ensure span behaves like a block element */
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent wrapping of text */
+    animation: reveal 5s linear infinite; /* Define animation */
+    color: #1BFD9C;
+    font-size: 26px;
+    margin-top: 5px;
+    font-family: "Playwrite ES Deco", cursive;;
+    text-transform: capitalize;
+  }
+  
+  @keyframes reveal {
+    0% {
+      width: 0; /* Start with zero width */
+    }
+    100% {
+      width: 100%; /* End with full width */
+    }
+  }
+
+  .alread-user{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+  .alread-user a{
+    color: #1BFD9C;;
+    cursor: pointer;
+  }
+
+  .getstarr-btn{
+    --green: #1BFD9C;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+width: 100%;
+    cursor: pointer;
+  }
+  
+  .getstarr-btn:hover {
+    color: #82ffc9;
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+  }
+  
+  .getstarr-btn:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+  }
+  
+  .getstarr-btn:hover:before {
+    transform: translateX(15em);
+  }
+
+  .googleimg{
+    width: 25px;
+  }
+
+  /*SIGN UP FORM */
+  .singup-section{
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+  }
+  .singup-section form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  
+  .signup{
+    cursor: pointer;
+  }
+.singup-section form input{
+  margin: 20px 0px;
+  height: 30px;
+  background-color: black;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.singup-section form input::placeholder{
+padding: 10PX;
+  color: rgb(161, 153, 153);
+}
+.singup-section h3{
+  color: white;
+  font-family: sans-serif;
+}
+.aggreement-wrapper{
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+}
+.aggreement-wrapper p{
+  font-size: 12px;
+  margin-top: 23px;
+  margin-left: 10px;
+  color: white;
+}
+.greement{
+  color: #1BFD9C;;
+  margin-left: 10px;
+}
+.aggreement-wrapper input{
+  accent-color:  #1BFD9C;
+}
+.button-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.button-wrapper button{
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.signupBtn{
+  --green: #1BFD9C;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.or{
+  color: white;
+  text-align: center;
+font-size: 20px;
+  margin: 10px 0px;
+}
+
+/* LOGIN FORM*/
+.login-section{
+ display: none;
+ flex-direction: column;
+ align-items: center;
+ padding: 10px;
+}
+.login-section form{
+display: flex;
+flex-direction: column;
+margin-top: 30px;
+}
+.login-section form input{
+  margin: 10px 0px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  
+}
+.login-section form input::placeholder{
+  padding: 10px;
+}
+
+.login-section form .button-wrapper
+.loginBtn{
+  --green: #1BFD9C;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.googlebtn{
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+  text-transform: uppercase;
+  font-weight: 600;
+
+}
+.signup-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+.signup-link a{
+  color: #1BFD9C;
+  font-size: 12px;
+}
+.signup-link  span{
+  color: white;
+  font-size: 12px;
+  margin-top: 5px;
+}

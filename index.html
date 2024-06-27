@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./logo/Screenshot_20240627-011008_Chrome.jpg">
+    <title>GENERATION BANK</title>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="cube-loader">
+            <div class="cube-top"></div>
+            <div class="cube-wrapper">
+              <span style="--i:0" class="cube-span"></span>
+              <span style="--i:1" class="cube-span"></span>
+              <span style="--i:2" class="cube-span"></span>
+              <span style="--i:3" class="cube-span"></span>
+            </div>
+          </div>
+        <div class="main">
+
+               <!----welcome page -->
+            <div class="welcome-page">
+                <div class="welcome-wrapper">
+                    <span class="bankname">Generation Bank</span>
+                </div>
+                    <img src="./intro-img/welcome .png" class="intro-img">
+                    <button class="getstarr-btn">Get Started</button>
+        
+                    <div class="alread-user">
+                        <span>alraedy have an account?</span>
+                        <a class="login">Login</a>
+                       </div>
+                     </div>
+           
+
+               <!----SIGNUP FORM -->
+               <div class="singup-section">
+                <h3>Sign Up</h3>
+                <form class="signupform">
+                    <input placeholder="Name" type="text">
+                    <input placeholder="Email" type="email">
+                    <input placeholder="Password" type="password">
+                    <div class="aggreement-wrapper">
+                        <input type="checkbox">
+                        <p>By signing up, you agree to the<span class="greement">Tearm of  Services and Privacy Policy</span></p>
+                    </div>
+                   <div class="button-wrapper">
+                    <button class="signupBtn">Sign up</button>
+                    <p class="or">or</p>
+                    <button class="googlebtn"><img src="./image8-2.webp"class="googleimg">continue with Google</button>
+                   </div>
+                   <div class="alread-user">
+                    <span>already have an account?</span>
+                    <a class="login">Login</a>
+                   </div>
+                </form>
+            </div>
+            <!-----LOGIN SECTION-->
+                <div class="login-section">
+                    <h3>Login</h3>
+                    <form>
+                        <input placeholder="Email" type="email">
+                        <input placeholder="Password" type="password">
+                        <div class="button-wrapper">
+                            <button class="loginBtn">login</button>
+                            <p class="or">or</p>
+                            <button class="googlebtn"><img src="./image8-2.webp"class="googleimg">continue with Google</button>
+                           </div>
+                           <div class="signup-link">
+                            <a>forgot password</a>
+                            <span>Dont have an account signup <a class="signup">Signup</a></span>
+                            
+                           </div>
+    
+    
+                    </form>
+
+                </div>
+                            
+               <div id="step2">
+              
+               </div>
+
+
+               
+        </div>
+       
+
+    
+
+    </div>
+ <script src="app.js"></script>
+</body>
+</html>
+
+<!-----
+
+
+<div class="loader">
+  <div class="cell d-0"></div>
+  <div class="cell d-1"></div>
+  <div class="cell d-2"></div>
+
+  <div class="cell d-1"></div>
+  <div class="cell d-2"></div>
+  
+  
+  <div class="cell d-2"></div>
+  <div class="cell d-3"></div>
+  
+  
+  <div class="cell d-3"></div>
+  <div class="cell d-4"></div>
+  
+  
+</div>
+
+CSS
+.loader {
+  --cell-size: 52px;
+  --cell-spacing: 1px;
+  --cells: 3;
+  --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--total-size);
+  height: var(--total-size);
+}
+
+.cell {
+  flex: 0 0 var(--cell-size);
+  margin: var(--cell-spacing);
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 4px;
+  animation: 1.5s ripple ease infinite;
+}
+
+.cell.d-1 {
+  animation-delay: 100ms;
+}
+
+.cell.d-2 {
+  animation-delay: 200ms;
+}
+
+.cell.d-3 {
+  animation-delay: 300ms;
+}
+
+.cell.d-4 {
+  animation-delay: 400ms;
+}
+
+.cell:nth-child(1) {
+  --cell-color: #00FF87;
+}
+
+.cell:nth-child(2) {
+  --cell-color: #0CFD95;
+}
+
+.cell:nth-child(3) {
+  --cell-color: #17FBA2;
+}
+
+.cell:nth-child(4) {
+  --cell-color: #23F9B2;
+}
+
+.cell:nth-child(5) {
+  --cell-color: #30F7C3;
+}
+
+.cell:nth-child(6) {
+  --cell-color: #3DF5D4;
+}
+
+.cell:nth-child(7) {
+  --cell-color: #45F4DE;
+}
+
+.cell:nth-child(8) {
+  --cell-color: #53F1F0;
+}
+
+.cell:nth-child(9) {
+  --cell-color: #60EFFF;
+}
+
+/*Animation*/
+@keyframes ripple {
+  0% {
+    background-color: transparent;
+  }
+
+  30% {
+    background-color: var(--cell-color);
+  }
+
+  60% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+
+-->
