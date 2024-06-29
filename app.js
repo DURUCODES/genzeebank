@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         singUppage.style.display = "flex";
         document.querySelector('.welcome-page').style.display = 'none';
     });
-    
+
      const loginEmail= document.querySelector('.login-email')
      const loginPassword = document.querySelector('.login-password')
     const loginPage = document.querySelector('.login-section');
@@ -49,12 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault()
         if (signupName.value.trim() !== '' && signupEmail.value.trim() !== '' && signupPassword.value.trim() !== ''){
             showNextPageAfterSignup()
+            updatePersonInfo()
         } else {
             alert('complete the empty filed')
-        } if (!checkBoxsignup.checked){
-            alert('Agree to procced')
-        } else {
+        } if (checkBoxsignup.checked){
             showNextPageAfterSignup()
+          
+        } else {
+            alert('Agree to procced')
         }
     })
 
@@ -67,23 +69,25 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('please fill the empty filed.')
         }
     })
-   ////////////////////////// SIGNUP F0RM///////////////////       
+   ////////////////////////// SIGNUP TRIM VALUE///////////////////     
+   
+const personNameDisplay = document.querySelector('.person-name');
+const personEmailDisplay = document.querySelector('.person-email');
 
+ function updatePersonInfo(){
+const personname= signupName.value.trim()
+const personemail=signupEmail.value.trim()
+personNameDisplay.textContent= `${personname}`
+personEmailDisplay.textContent= `${personemail}`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ }
+///////FORM SUBMITTING ///////////
+ const  cardApp= document.querySelector('.card-application');
+ cardApp.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    showPage(landingPage);
+    
+ }) 
 
 
 
@@ -215,15 +219,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-        /////ADD INCOME FUNCTIONS////
-        const accountInput = document.querySelector(".account-name");
-        const amountInput = document.querySelector('.amount-sent');
-        const dateInput = document.querySelector('.date')
-        
-        // Selecting the container where details will be displayed
-        const contentContainer = document.querySelector('.content');
+
+
+
 
         
 });
 
- 
