@@ -4,6 +4,41 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.cube-loader').style.display = 'none';
         document.querySelector('.welcome-page').style.display = 'flex';
     }, 15000); // 15 seconds in milliseconds*/
+
+    /////HIDE AMOUNT AND DISPLAY AMOUNT FUNCTION/////
+     
+const showBalance = document.querySelector('.seen')
+const hideBalance= document.querySelector('.unseen')
+hideBalance.addEventListener('click', ()=>{
+    hideBalance.style.display="none"
+    showBalance.style.display="flex"
+     document.querySelector('.total').textContent="********"
+     document.querySelector('.total-income').textContent="********"
+})
+showBalance.addEventListener('click', ()=>{
+    hideBalance.style.display="flex"
+    showBalance.style.display="none"
+    const totalElement = document.querySelector('.total');
+    const totalIncomeElement = document.querySelector('.total-income');
+    
+    // Example: Assuming you have stored actual balance values somewhere
+    const actualTotal = 1000; // Replace with your actual balance value
+    const actualTotalIncome = 500; // Replace with your actual income value
+    
+    totalElement.textContent = actualTotal.toFixed(2); // Display actual balance
+    totalIncomeElement.textContent = actualTotalIncome.toFixed(2); // Di
+})
+
+
+
+
+
+
+
+
+
+
+    
     const signupName = document.querySelector('.signup-name')
     const signupEmail = document.querySelector('.signup-email')
     const signupPassword = document.querySelector('.signup-password')
