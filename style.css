@@ -440,6 +440,7 @@ display:block;
 .seen{
   cursor: pointer;
   margin-left: 5px;
+  display: none;
 }
 .unseen svg {
   width: 15px;
@@ -448,7 +449,7 @@ display:block;
 .unseen{
   cursor: pointer;
   margin-left: 5px;
-  display: none;
+  display: flex;
 }
 .hide-blance{
 display: flex;
